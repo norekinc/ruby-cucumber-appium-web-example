@@ -14,7 +14,7 @@ def server_url
 end
  
 def driver
-  @driver ||= Appium::Driver.new(caps: CAPS)
+  @driver ||= Appium::Driver.new(appium_lib: { server_url: server_url }, caps: CAPS)
   @driver.driver
 end
 
